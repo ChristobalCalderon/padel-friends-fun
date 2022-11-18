@@ -21,7 +21,7 @@ const ProfileCard = ({ user }: ProfileCardProps) => {
   )
 }
 
-const Profile = ({ user, isLoading }) => {
+const Profile = ({ user, isLoading }:any) => {
   return (
     <Layout user={user} loading={isLoading}>
       {isLoading ? <>Loading...</> : <ProfileCard user={user} />}

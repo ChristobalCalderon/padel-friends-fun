@@ -3,18 +3,27 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.9.1",
+    "@ant-design/icons": "^4.7.0",
+    "antd": "^5.0.0",
+    "mongodb": "^4.8.1",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "browser": {
+    "fs": false,
+    "path": false
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "@playwright/test": "^1.15.0"
   }
 }
