@@ -24,7 +24,7 @@ const ApiProfile = () => {
       <div>
         <h3>Public page (client rendered)</h3>
         <p>We are fetching data on the client-side :</p>
-        <p>By making request to '/api/protected-api' serverless function</p>
+        <p>By making request to /api/protected-api serverless function</p>
         <p>so without a valid session cookie will fail</p>
         <p>{JSON.stringify(data)}</p>
       </div>

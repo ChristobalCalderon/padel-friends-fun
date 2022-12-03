@@ -13,7 +13,7 @@ export default function Profile({ user }: ProfileProps) {
 
       <div>
         <h3>Profile (server rendered)</h3>
-        <img src={user.picture} alt="user picture" />
+        {/* <Image src={user.picture} /> */}
         <p>nickname: {user.nickname}</p>
         <p>name: {user.name}</p>
       </div>

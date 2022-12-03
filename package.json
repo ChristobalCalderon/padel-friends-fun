@@ -4,26 +4,52 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "test:e2e": "playwright test"
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run",
+    "e2e": "start-server-and-test dev http://localhost:3000 cypress",
+    "e2e:headless": "start-server-and-test dev http://localhost:3000 cypress:headless"
   },
   "dependencies": {
-    "@auth0/nextjs-auth0": "^1.9.1",
     "@ant-design/icons": "^4.7.0",
-    "antd": "^5.0.0",
+    "@auth0/nextjs-auth0": "^1.9.1",
+    "@tailwindcss/forms": "^0.5.3",
+    "flowbite": "^1.5.4",
+    "flowbite-react": "^0.3.6",
+    "formik": "^2.2.9",
+    "framer-motion": "^7.6.1",
     "mongodb": "^4.8.1",
     "next": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-confetti": "^6.1.0",
+    "react-confetti-explosion": "^1.5.1",
+    "react-dom": "^18.2.0",
+    "yup": "^0.32.11"
   },
   "browser": {
     "fs": false,
-    "path": false
+    "path": false,
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.14",
     "@types/react-dom": "^18.0.5",
-    "typescript": "^4.7.4",
-    "@playwright/test": "^1.15.0"
+    "autoprefixer": "^10.4.12",
+    "cypress": "10.3.1",
+    "eslint": "8.26.0",
+    "eslint-config-next": "13.0.0",
+    "postcss": "^8.4.18",
+    "start-server-and-test": "1.14.0",
+    "tailwindcss": "^3.2.1",
+    "typescript": "^4.7.4"
   }
 }
