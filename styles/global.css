@@ -10,12 +10,22 @@ html {
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
 
-body {
-  background-color: var(--backgroundColor);
-  -ms-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+.container {
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  min-height: 100vh;
+  position: relative;
+}
+
+.create {
+  position:fixed;
+  bottom: 30px;
+  right: 10vh;
+  z-index:1000;
 }
 
 .text-left {
@@ -206,15 +216,6 @@ body {
   src: url("../public/Lato-Bold.ttf");
 }
 
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  background-color: rgb(20 184 166);
-}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -222,4 +223,8 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+.footer {
+  flex-shrink: 0;
 }

@@ -2,38 +2,35 @@ import { useUser } from "@auth0/nextjs-auth0";
 import Layout from "../components/layout";
 import clientPromise from "../lib/mongodb";
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
-import { Carousel } from "flowbite-react";
+import { Button, Pagination } from "flowbite-react";
+import { FaBeer, FaPlus } from "react-icons/fa";
+import MatchEvent from "../components/matchEvent";
+import Link from "next/link";
 
 export default function Home({
   isConnected,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
   const { user, isLoading } = useUser();
 
+  const onChange = (page: number) => console.log("weq");
+
   return (
     <Layout user={user} loading={isLoading}>
-      <div className="h-56 sm:h-64 xl:h-80 2xl:h-96">
-        <Carousel>
-          <img
-            src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-            alt="..."
-          />
-          <img
-            src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-            alt="..."
-          />
-          <img
-            src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-            alt="..."
-          />
-          <img
-            src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
-            alt="..."
-          />
-          <img
-            src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-            alt="..."
-          />
-        </Carousel>
+      <Pagination
+        className="h-22"
+        currentPage={15}
+        totalPages={100}
+        showIcons={true}
+        onPageChange={onChange}
+      />
+      <MatchEvent></MatchEvent>
+      <MatchEvent></MatchEvent>
+      <div className="create dark:bg-black">
+        <Link href={"createevent"}>
+          <Button color="warning" pill={true} size={"xl"}>
+            <FaPlus />
+          </Button>
+        </Link>
       </div>
     </Layout>
   );

@@ -16,7 +16,7 @@ const Header = ({ user, loading }: HeaderProps) => {
             alt="Flowbite Logo"
           />
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-            Flowbite
+            Padel Friends & Fun
           </span>
         </Navbar.Brand>
         <div className="flex md:order-2">
