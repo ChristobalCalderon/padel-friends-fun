@@ -41,10 +41,11 @@ export default function Home() {
       exit={{ opacity: 0 }}
       className="absolute w-full"
     >
-      <div className="  h-screen items-center flex justify-center">
+      <div className="  h-screen items-center flex justify-center dark:bg-black">
         <form
           onSubmit={formik.handleSubmit}
-          className="bg-white flex rounded-lg w-1/2 font-latoRegular"
+          style={{ backgroundColor: "#1f2937" }}
+          className="flex rounded-lg w-1/2 font-latoRegular"
         >
           <div className="flex-1 text-gray-700  p-20">
             <h1 className="text-3xl pb-2 font-latoBold">Let get started</h1>
@@ -161,15 +162,6 @@ export default function Home() {
               </button>
             </div>
           </div>
-          {/* <div className="relative flex-1">
-            <Image
-              className=" object-cover rounded-lg"
-              fill
-              priority
-              src={formImage}
-              alt="form-learn"
-            />
-          </div> */}
         </form>
       </div>
     </m.div>
